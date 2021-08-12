@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
 })
 
 const secret = "ThisIsOurLittleScret.";
-userSchema.plugin(encrypt,{secret: secret, encryptFields:["password"]})
+userSchema.plugin(encrypt,{secret: secret, encryptedFields:["password"]})
 
 
 const User = new mongoose.model("User",userSchema)
